@@ -1,0 +1,73 @@
+* { box-sizing: border-box; }
+
+body {
+    background: #4391f6;
+    font: normal 15pt Arial;
+}
+
+header {
+    color: #ffffff;
+    text-align: center;
+}
+
+section {
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.44);
+}
+
+section > .forn {
+    width: 500px;
+    align-items: center;
+    color: #0022ff;
+}
+section input[type="number"] {
+    width: 470px;
+    padding: 10px;
+    color: #0022ff;
+    font-size: 16px;
+    border: 2px solid #0022ff;
+    outline: none;
+}
+section .sexo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#res {
+    text-align: center;
+    color: #f802bf;
+    font-size: 18px;
+    font-style: italic;
+}
+button {
+    cursor: pointer;
+    padding: 8px;
+    width: 470px;
+    color: #0022ff;
+    margin-bottom: 15px;
+    background: none;
+    border: 2px solid #0022ff;
+    font-size: 20px;
+}
+button:hover {
+    background: #0022ff;
+    color: #FFFFFF;
+    outline: none;
+    transition: 0.8s;
+}
+
+section .sexo {
+    display: flex;
+    align-items: center;
+}
+
+footer {
+    color: #ffffff;
+    font-style: italic;
+    text-align: center;
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Condicional JAVASCRIPT</title>
+</head>
+<body>
+<h1>Condicional BomDia!</h1>
+
+<script>
+    var agora = new Date()
+    var hora = agora.getHours()
+    document.write(`Agora são exatamente ${hora} horas.`)
+
+    if (hora < 12) {
+        document.write('Bom dia!')
+    } else if (hora <= 18) {
+        document.write('Boa tarde!')
+    } else {
+        document.write('Boa noite!')
+    }
+</script>
+</body>
+</html>

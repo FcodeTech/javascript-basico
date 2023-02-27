@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Detram</title>
+
+    <style>
+        body {
+            text-align: center;
+            background-color: #4A148C;
+            color: #dddddd;
+
+        }
+
+        .velocidade {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 400px;
+            height: 150px;
+            padding-top: 50px;
+            margin: 30px auto;
+            background: #dddddd;
+            box-shadow: 1px 2px 8px black;
+        }
+
+        input {
+            width: 200px;
+            margin-bottom: 8px;
+            border: none;
+            outline: none;
+            padding: 10px;
+            color: #0B7DDA;
+        }
+
+        button {
+            cursor: pointer;
+            width: 220px;
+            height: 35px;
+            border: 2px solid #0B7DDA;
+            text-transform: uppercase;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+<h1>Sistema de Multas</h1>
+<div class="velocidade">
+    <input type="number" id="txtvel" placeholder="Digite o km...">
+    <button>Consultar</button>
+</div>
+<div id="res"></div>
+
+<script>
+    const butto = document.querySelector('button')
+    butto.addEventListener('click', calcular)
+    butto.addEventListener('mouseenter', entrar)
+    butto.addEventListener('mouseout', sair)
+
+    // Criando função calcular
+    function calcular() {
+        var txtv = document.querySelector('input#txtvel')
+        var res = document.querySelector('div#res')
+        var vel = Number(txtv.value)
+        res.innerHTML = `Sua velocidade atual é de <strong> ${vel} </strong> Km/h`
+
+        // Condicional simples
+        if (vel > 60) {
+            res.innerHTML += `<p>Você está <strong>MULTADO</strong> por excesso de velocidade</p>`
+        }
+            res.innerHTML += `<p>Dirija sempre com sinto de segurança!</p>`
+    }
+
+    // funções
+    function entrar() {
+        butto.style.color = '#FFF'
+        butto.style.background = '#0B7DDA'
+        butto.style.transition = '0.5s'
+        botao.style.fontWeight = '700'
+    }
+    function sair() {
+        butto.style.background = 'none'
+        butto.style.color = '#0B7DDA'
+        botao.style.fontWeight = '700'
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Variaveis Compostas</title>
+</head>
+<body>
+    <h1>Array - Vetor</h1>
+
+    <script>
+        //Criando Array
+        let num = [5,8,2,9,3]
+
+        // Buscando valor no array  'num.indexOf(valor)'
+        let pos = num.indexOf(4)   // Se o valor não existir aparece '-1'
+        if (pos === -1){
+            document.write('Valor não encontrado <br>')
+        } else {
+            document.write(`O valor 8 ta na posição ${pos} <br>`)
+        }
+
+
+        // Adicionando valores no array   'variavel[posição do valor] = valor'
+        num[5] = 7
+
+        // Adicionando valores automatico na ultima possição    'variavel.push(valor)'
+        num.push(1)
+
+        // Saber comprimento do array   'variavel.length - 0 1 2 3...' array sempre começa contar do zerro
+        num.length
+
+
+        // Ordenando elementos em ordem crescente
+        num.sort()
+
+
+        document.write(`Nosso vetor: ${num} <br>`)
+        document.write(`O vetor tem ${num.length} posições<br>`)
+        document.write(`O primeiro elemento do vetor é ${num[0]}`)
+    </script>
+</body>
+</html>

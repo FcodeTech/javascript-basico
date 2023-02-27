@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Condições JAVASCRIPT</title>
+
+    <style>
+        body {
+            text-align: center;
+            background-color: #4A148C;
+            color: #dddddd;
+
+        }
+
+        .velocidade {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 400px;
+            height: 150px;
+            padding-top: 50px;
+            margin: 30px auto;
+            background: #dddddd;
+            box-shadow: 1px 2px 8px black;
+        }
+
+        input {
+            width: 200px;
+            margin-bottom: 8px;
+            border: none;
+            outline: none;
+            padding: 10px;
+            color: #0B7DDA;
+        }
+
+        button {
+            width: 220px;
+            padding: 8px;
+            border: 2px solid #0B7DDA;
+            text-transform: uppercase;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+<h1>Condicional simples</h1>
+
+<div class="velocidade">
+    <input type="number" id="veloc" placeholder="Digite a velocidade">
+    <button>Consultar</button>
+</div>
+<p class="resultado"></p>
+
+<script>
+    const botao = document.querySelector('button')
+    botao.addEventListener('click', consultar)
+    botao.addEventListener('mouseenter', entrar)
+    botao.addEventListener('mouseout', sair)
+
+    function entrar() {
+        botao.style.background = '#0B7DDA'
+        botao.style.color = '#FFF'
+        botao.style.transition = '1s'
+    }
+
+    function sair() {
+        botao.style.background = 'none'
+        botao.style.color = '#0B7DDA'
+        botao.style.fontWeight = '700'
+    }
+
+
+    // Função de condição simples
+    function consultar() {
+        const vel = document.querySelector('input#veloc')
+        const resultado = document.querySelector('p.resultado')
+        let velox = Number(vel.value)
+        resultado.innerHTML = `Sua velocidade atual é de: ${velox} km/h`
+
+        //Condicional
+        if (velox > 60) {
+            resultado.innerHTML += `<p>Você utrapassou a velocidade de permitida. MULTADO</p>`
+        }
+            resultado.innerHTML += '<p>Dirija sempre com cinto de segurança!</p>'
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+* { box-sizing: border-box; }
+
+body {
+    background: #4391f6;
+    font: normal 15pt Arial;
+}
+
+header {
+    color: #ffffff;
+    text-align: center;
+}
+
+section {
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.44);
+}
+section > div {
+    text-align: center;
+    padding: 15px;
+}
+
+footer {
+    color: #ffffff;
+    font-style: italic;
+    text-align: center;
+}

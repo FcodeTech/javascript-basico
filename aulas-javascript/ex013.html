@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Condicional JAVASCRIPT</title>
+</head>
+<body>
+<h1>Condicional Switch Case</h1>
+<!--
+0 = Domindo
+1 = Segunda
+3 = Terça
+4 = Quarta
+5 = Sexta
+6 = Sabado
+-->
+
+<script>
+    var agora = new Date()
+    var diaSem = agora.getDay()
+    //document.write(diaSem)
+
+
+// Condional Switch case
+    switch (diaSem) {
+      case 0:
+        document.write('Domingo')
+            break
+      case 1:
+        document.write('Segunda')
+            break
+      case 2:
+        document.write('Terça')
+            break
+      case 3:
+        document.write('Quarta')
+            break
+      case 4:
+        document.write('Quinta')
+            break
+      case 5:
+        document.write('Sexta')
+            break
+      case 6:
+        document.write('Sabado')
+            break
+      default:
+        document.write('[ERRO] Dia Inválido')
+            break
+    }
+</script>
+</body>
+</html>

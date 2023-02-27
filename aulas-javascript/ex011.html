@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Codicionais JAVASCRIPT</title>
+</head>
+<body>
+<h1>Codicional aninhada </h1>
+
+<script>
+    var idade = 10
+    document.write(`Você tem ${idade} anos.`)
+
+    if (idade < 16) {
+        document.write('Não vota')
+    } else if (idade < 18 || idade > 65) {
+        document.write('Voto opcional')
+    } else {
+        document.write('Voto obrigatório')
+    }
+</script>
+</body>
+</html>

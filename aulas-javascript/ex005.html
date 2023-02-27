@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Manipulando o DOM </title>
+    <style>
+        body {
+            background-image: linear-gradient(to right, rgb(0, 132, 240), rgb(36, 255, 2), rgb(0, 0, 0));
+            font: normal 18pt Arial;
+            color: rgb(255, 255, 255);
+            padding: 16px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Iniciando os estudos de DOM</h1>
+    <p>Aqui vai o resultado</p> 
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+    <div id="msg" name="msg-2">Clique em mim</div>
+
+
+    <!-- Codigo javascript -->
+    <script>
+        //getElementsByTagName()
+        var corpo = document.body
+        var p1 = window.document.getElementsByTagName('p')[0]
+        p1.style.color = 'red'
+        document.write(p1.innerHTML)
+        corpo.style.background ='black'
+
+        //getElementsById()
+        var d = document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerHTML = 'Alterando o texto via ID'
+
+        //getElementsByName()
+        var n = document.getElementsByName('msg-2')[0]
+        n.innerHTML = 'Alterando via Name'
+        n.style.color = 'blue'
+
+        //querySelector()
+        var s = document.querySelector('div#msg')
+        s.style.color = 'black'
+        s.style.background = 'pink'
+   </script>
+</body>
+</html>

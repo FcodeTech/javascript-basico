@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Vetor array</title>
+</head>
+<body>
+  <h1>Imprimindo valores do array</h1>
+
+  <script>
+    //Criando Array
+    let valores = [5,8,2,9,3]
+    valores.sort() //Ordenando o array em 'ordem crescente'
+
+
+
+    // Imprimindo valor do array
+    document.write(`${valores} <br>`)
+
+    // Imprimindo valor do array com FOR
+    for (let pos=0; pos<valores.length; pos++){
+        document.write(`A posição ${pos} tem o valor ${valores[pos]} <br>`)
+    }
+
+    // Maneira simplificada de imprimir array
+    for (let pos in valores){
+      document.write(`A posição ${pos} tem valor ${valores[pos]} <br>`)
+    }
+
+  </script>
+</body>
+</html>

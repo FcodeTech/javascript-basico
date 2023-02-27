@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Função </title>
+</head>
+<body>
+<h1>Função 05</h1>
+
+<script>
+  //Segunda função recursive
+  function fatorial(n) {
+      if (n === 1) {
+          return 1
+      } else {
+          return n * fatorial(n-1)
+      }
+  }
+
+  //cchamada da função
+  document.write(fatorial(5))
+
+  // 5! = 5 x 4 x 3 x 2 x 1
+  // 5! = 5 x 4!
+
+  // n! = n x (n-1)!
+  // 1! = 1
+</script>
+</body>
+</html>
